@@ -702,7 +702,7 @@ class OWVolcanoPlot(widget.OWWidget):
                 )
 
             X1, X2 = X[:, I1], X[:, I2]
-            if numpy.any(X1 < 0.0) or numpy.any(X2 < 0):
+            if numpy.any(X1 < 0) or numpy.any(X2 < 0):
                 self.error(
                     "Negative values in the input. The inputs cannot be in "
                     "ratio scale."
